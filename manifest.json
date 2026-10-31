@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "JioHotstar Auto Skip Intro",
+  "version": "1.0.0",
+  "description": "Automatically clicks Skip Intro, Skip Credits, Skip Recap on JioHotstar",
+  "icons": {
+    "128": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.hotstar.com/*",
+        "*://*.jiohotstar.com/*",
+        "*://hotstar.com/*",
+        "*://jiohotstar.com/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
